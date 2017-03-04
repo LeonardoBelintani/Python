@@ -1,7 +1,6 @@
+import random
 def definirGrupos():
-    import random
-
-    maxIntegrantes = int(input("Digite o número de integrantes para cada grupo: "))
+   
     Pessoas = obterPessoas()
     Grupos = []
     GrupoCorrente = []
@@ -22,7 +21,9 @@ def definirGrupos():
 
 def obterPessoas():
 
-    print('* ATENÇÃO, digite 0 para finalizar a lista de pessoas. /r/n')
+    global maxIntegrantes
+    maxIntegrantes = int(input("Digite o número de integrantes para cada grupo: "))
+    print('* ATENÇÃO, digite 0 para finalizar a lista de pessoas. \r\n')
     Pessoas = []
     Nome = ''
 
@@ -35,7 +36,7 @@ def obterPessoas():
             if Nome != '0':
                 Pessoas.append(Nome)
 
-    return Pessoas;
+    return Pessoas
 
 def listarGrupos(grupos):
     nrGrupos = int(0)
